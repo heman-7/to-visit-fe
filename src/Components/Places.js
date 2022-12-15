@@ -31,7 +31,10 @@ function Places(props) {
 
   return (
     <div className="container">
-      <Card className="text-center" style={{ display: "block", padding: 10 , border: 0}}>
+      <Card
+        className="text-center"
+        style={{ display: "block", padding: 10, border: 0 }}
+      >
         <CardBody>
           <CardTitle tag="h5">{props.city}</CardTitle>
           <CardSubtitle>
@@ -44,11 +47,11 @@ function Places(props) {
           </CardText>
         </CardBody>
         <Row>
-        <Col md="5"></Col>
+          <Col md="5"></Col>
           <Col md="1">
             <Button
               color="warning"
-              style={{ width: 80 }}
+              style={{}}
               onClick={() => {
                 updateHandler(props.id);
               }}
@@ -56,10 +59,11 @@ function Places(props) {
               Update
             </Button>
           </Col>
+          &nbsp;
           <Col md="1">
             <Button
               color="danger"
-              style={{ width: 80 }}
+              style={{}}
               onClick={() => {
                 deleteHandler(props.id);
               }}

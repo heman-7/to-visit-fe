@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import axios from "axios";
 import { useHistory } from "react-router";
+import React from "react";
 
 function Places(props) {
   const baseUrl = "http://localhost:8080/toVisit/place/remove/";

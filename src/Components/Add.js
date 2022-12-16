@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
+import React from "react";
 
 const Add = () => {
   const [enteredCity, setEnteredCity] = useState("");
@@ -24,7 +25,7 @@ const Add = () => {
     setEnteredAttraction("");
     setEnteredMonth("");
     axios.post(baseUrl, placesData).then(
-      () => history.push("/places") 
+      () => history.push("/places")
       // console.log(" response " + JSON.stringify(response.data))
     );
   };

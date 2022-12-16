@@ -5,8 +5,10 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
 } from "reactstrap";
+import React from "react";
+
 const Menu = () => {
   return (
     <div>

@@ -5,6 +5,7 @@ import PlacesList from "./Components/PlacesList";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Add from "./Components/Add";
 import Edit from "./Components/Edit";
+import React from "react";
 
 function App() {
   return (

@@ -43,7 +43,10 @@ const Add = () => {
   };
 
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{ position: "relative", minHeight: "91vh" }}
+    >
       <Form style={{ display: "block", padding: 20 }} onSubmit={submitHandler}>
         <Row>
           <Col md="3"></Col>

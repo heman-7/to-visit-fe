@@ -5,7 +5,7 @@ import Recommendations from "./Recommendations";
 
 const Home = () => {
   return (
-    <div>
+    <div style={{ position: "relative", minHeight: "91vh" }}>
       <Jumbotron className="text-center bg-color">
         <h1 className="display-5" style={{ padding: 5 }}>
           Plans for 2022!

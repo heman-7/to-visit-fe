@@ -1,6 +1,7 @@
 import { Jumbotron } from "reactstrap";
 import "./Home.css";
 import React from "react";
+import Recommendations from "./Recommendations";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
           Abroad Trip Coming soon...
         </p>
       </Jumbotron>
+      <Recommendations></Recommendations>
     </div>
   );
 };

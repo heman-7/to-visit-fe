@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Places from "./Places";
-import Scroll from "./Scroll";
 import React from "react";
 import TextField from "@mui/material/TextField";
 
@@ -41,16 +40,17 @@ const PlacesList = () => {
 
   return (
     <div>
-      <TextField
-        style={{ margin: 10 }}
-        id="outlined-basic"
-        label="City"
-        variant="outlined"
-        placeholder="Search by city"
-        onChange={OnChangeHandler}
-      />
-
-      <Scroll>
+      <div style={{ float: "right", marginRight: 10 }}>
+        <TextField
+          style={{ margin: 10 }}
+          id="outlined-basic"
+          label="City"
+          variant="outlined"
+          placeholder="Search by city"
+          onChange={OnChangeHandler}
+        />
+      </div>
+      <div style={{ paddingTop: 70 }}>
         {filteredPlacesList.length > 0
           ? filteredPlacesList.map((place) => (
               <Places
@@ -63,7 +63,7 @@ const PlacesList = () => {
               />
             ))
           : "No places added yet"}
-      </Scroll>
+      </div>
     </div>
   );
 };

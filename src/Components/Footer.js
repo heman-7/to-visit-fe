@@ -1,9 +1,7 @@
-import { color } from "@mui/system";
 import React from "react";
 
 function Footer() {
   return (
-    //fix footer
     <div
       className="text-center"
       style={{

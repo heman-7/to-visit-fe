@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 
 const Recommendation = (props) => {
   return (
-    <div style={{ flex: 1 }}>
+    <div style={{ flex: 1, width: "300px" }}>
       <Card variant="outlined">
         <CardContent>
           <Typography variant="h5" component="div">

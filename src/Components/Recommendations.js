@@ -3,6 +3,16 @@ import axios from "axios";
 import Recommendation from "./Recommendation";
 import Typography from "@mui/material/Typography";
 import { CircularProgress } from "@mui/material";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
+
+const styles = {
+  scrollSection: {
+    display: "flex",
+    flexDirection: "row",
+    overflowX: "scroll",
+    scrollBehavior: "smooth",
+  },
+};
 
 const Recommendations = () => {
   const fetchRecommendationsUrl =
@@ -28,17 +38,19 @@ const Recommendations = () => {
         {isLoading ? (
           <CircularProgress color="inherit" />
         ) : (
-          <div style={{ display: "flex", flexDirection: "row" }}>
-            {recommendations.length > 0
-              ? recommendations.map((recommendation) => (
-                  <Recommendation
-                    key={recommendation.id}
-                    city={recommendation.place.city}
-                    attraction={recommendation.place.attraction}
-                    month={recommendation.place.month}
-                  />
-                ))
-              : "No recommendations found"}
+          <div style={styles.scrollSection}>
+            <ScrollMenu>
+              {recommendations.length > 0
+                ? recommendations.map((recommendation) => (
+                    <Recommendation
+                      key={recommendation.id}
+                      city={recommendation.place.city}
+                      attraction={recommendation.place.attraction}
+                      month={recommendation.place.month}
+                    />
+                  ))
+                : "No recommendations found"}
+            </ScrollMenu>
           </div>
         )}
       </div>

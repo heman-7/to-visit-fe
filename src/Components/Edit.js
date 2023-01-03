@@ -22,6 +22,7 @@ const Edit = (props) => {
       setId(response.data.id);
       // console.log(response.data);
     });
+    // eslint-disable-next-line
   }, []);
 
   let history = useHistory();

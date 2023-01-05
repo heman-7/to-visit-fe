@@ -23,8 +23,8 @@ const Recommendations = () => {
 
   useEffect(() => {
     axios.get(fetchRecommendationsUrl).then((response) => {
-      console.log(" response " + JSON.stringify(response.data));
-      console.log(" length " + response.data.length);
+      // console.log(" response " + JSON.stringify(response.data));
+      // console.log(" length " + response.data.length);
       setIsLoading(false);
       setRecommendations(response.data);
     });
